@@ -5,8 +5,7 @@
     <artifactId>hibernate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>hibernate-m2mbi</artifactId>
-  
+  <artifactId>hibernate-m2o</artifactId>
   <dependencies>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>

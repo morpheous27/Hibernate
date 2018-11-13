@@ -25,5 +25,10 @@
   <modules>
   	<module>hibernate-annotations</module>
   	<module>hibernate-m2mbi</module>
+  	<module>hibernate-m2o</module>
+  	<module>hibernate-o2m</module>
+  	<module>hibernate-o2mCompositeKey</module>
+  	<module>hibernate-o2o</module>
+  	<module>hibernate-o2obi</module>
   </modules>
 </project>

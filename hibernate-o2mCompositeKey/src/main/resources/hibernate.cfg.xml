@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <!-- property name="hibernate.connection.datasource">PMSDS</property-->
+        <!--property name="hibernate.connection.datasource">PMSDSUAT</property-->
+        <property name="connection.url">jdbc:oracle:thin:@//localhost:1521/XE</property>
+        <property name="connection.username">nitin</property>
+        <property name="connection.password">nitin</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
+        <property name="cache.use_second_level_cache">false</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!-- Disable the query cache  -->
+        <property name="cache.use_query_cache">false</property>
+        <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+        <property name="hibernate.current_session_context_class"> thread </property> 
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="auto-import">false</property>
+        <!--com.ofss.pms.entitie\Main.hbm.xml -->
+ 
+    </session-factory>
+
+</hibernate-configuration>

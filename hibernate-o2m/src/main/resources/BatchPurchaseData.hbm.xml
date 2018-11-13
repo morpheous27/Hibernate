@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="BatchPurchaseDataModel" table="BatchPurchaseData">
+		<meta attribute="class-description">
+			This class contains the address detail.
+		</meta>
+		<id name="batchId" type="java.lang.Integer" column="batchId">
+			<generator class="native" />
+		</id>
+		
+		<property name="medicineName"  column="medicineName" type="string" />
+		<property name="medicineCode" column="medicineCode" type="string" />
+		<property name="sellerId" column="sellerId" type="string" />
+		<property name="sellerAddress" column="sellerAddress" type="string" />
+		<property name="noOfPakages" column="noOfPakages" type="java.lang.Integer" />
+		<property name="unitsPerPackage" column="unitsPerPackage"  type="java.lang.Integer" />
+		<property name="dateOfPurchase" column="dateOfPurchase"  type="date" />
+		<property name="expDateOfPackage" column="expDateOfPackage"  type="date" />
+		<property name="costPrice" column="costPrice" type="java.lang.Integer" />
+		<property name="discountPercent" column="discountPercent" type="java.lang.Integer" />
+		<property name="effectivePrice" column="effectivePrice" type="java.lang.Integer" />
+		<property name="vatPercent" column="vatPercent" type="java.lang.Integer" />
+	</class>
+
+</hibernate-mapping>

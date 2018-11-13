@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="Address" table="ADDRESS">
+		<meta attribute="class-description">
+			This class contains the address detail.
+		</meta>
+		<id name="id" column="aid">
+			<generator class="increment" >
+	
+			</generator>
+		</id>
+		<property name="street" column="street_name" type="string" />
+		<property name="city" column="city_name" type="string" />
+		<property name="state" column="state_name" type="string" />
+		<property name="flat" column="flat" type="int" />
+		<set name="set" table="emp_add" cascade="all" inverse="true">
+		<key>
+		<column name="aid" not-null="true"/>
+		</key>
+		<many-to-many class="Employee" column="eid"/>
+		</set>
+	</class>
+
+</hibernate-mapping>
